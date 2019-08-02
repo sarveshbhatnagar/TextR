@@ -1,6 +1,9 @@
 
 class Process(object):
-    """docstring for Process."""
+    """Class process , initialize it with the content which you want to process.
+    lex() returns tokens one after other,
+    end() returns False if its the end of the content.
+    """
 
     def __init__(self, content):
         self.content = content.split()

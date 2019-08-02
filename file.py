@@ -2,7 +2,10 @@
 
 
 class File(object):
-    """docstring for File."""
+    """documentation for File.
+    initialize with filename,
+    read() returns the content of the file.
+    """
 
     def __init__(self, filename):
         super(File, self).__init__()
