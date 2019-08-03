@@ -20,3 +20,6 @@ while notes.end():
         # print(constants.function[x])
         #change state to the function value
         state = constants.function[x]
+    if state == 1:
+        print("do sum");
+        print(x);
