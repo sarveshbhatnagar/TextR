@@ -1,3 +1,4 @@
+import file
 
 class Process(object):
     """Class process , initialize it with the content which you want to process.
@@ -30,23 +31,31 @@ class Process(object):
             tem = 0;
             for num in self.sum:
                 tem += num;
-            print(tem);
+            x = file.File("input.tr")
+            # print(tem);
+            x.wrt(str(tem));
             self.sum = []
         elif self.state == 2:
             tem = 0;
             for num in self.sub:
                 tem -= num;
-            print(tem);
+            x = file.File("input.tr")
+            # print(tem);
+            x.wrt(str(tem));
             self.sub = []
         elif self.state == 3:
             tem = 1;
             for num in self.mult:
                 tem *= num;
-            print(tem);
+            x = file.File("input.tr")
+            # print(tem);
+            x.wrt(str(tem));
             self.mult = []
         elif self.state == 4:
             tem = 0;
             for num in self.div:
                 tem /= num;
-            print(tem);
+            x = file.File("input.tr")
+            # print(tem);
+            x.wrt(str(tem));
             self.div = []

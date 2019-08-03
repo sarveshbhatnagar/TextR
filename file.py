@@ -16,3 +16,8 @@ class File(object):
         with open(self.filename,'r') as file:
             content = file.read()
         return content
+
+    def wrt(self,content):
+        with open("output.txt","a") as file:
+            file.write(content)
+            file.write("\n")
