@@ -4,7 +4,7 @@ import constants
 
 
 #opening the file input.txt
-x = file.File("input.txt")
+x = file.File("input.tr")
 
 #reading the file
 content = x.read()
@@ -26,70 +26,24 @@ while notes.end():
         # print(constants.function[x])
         #change state to the function value
         #since state is changing here, we need to perform previous state function.
-        if state == 1:
-            tem = 0;
-            for num in sum:
-                tem += num;
-            print(tem);
-            sum = []
-        elif state == 2:
-            tem = 0;
-            for num in sub:
-                tem -= num;
-            print(tem);
-            sub = []
-        elif state == 3:
-            tem = 1;
-            for num in mult:
-                tem *= num;
-            print(tem);
-            mult = []
-        elif state == 4:
-            tem = 0;
-            for num in div:
-                tem /= num;
-            print(tem);
-            div = []
-        state = constants.function[x]
-        stateChange = True;
+        notes.proc();
+        notes.state = constants.function[x]
+        notes.stateChange = True;
 
-    if state == 1 and stateChange == False:
+    if notes.state == 1 and notes.stateChange == False:
         # print("do sum");
         # print(x);
-        sum.append(int(x));
+        notes.sum.append(int(x));
 
-    elif state == 2 and stateChange == False:
-        sub.append(int(x));
-    elif state == 3 and stateChange == False:
-        mult.append(int(x));
-    elif state == 4 and stateChange == False:
-        div.append(int(x));
+    elif notes.state == 2 and notes.stateChange == False:
+        notes.sub.append(int(x));
+    elif notes.state == 3 and notes.stateChange == False:
+        notes.mult.append(int(x));
+    elif notes.state == 4 and notes.stateChange == False:
+        notes.div.append(int(x));
     else:
         print(x);
-        stateChange = False;
+        notes.stateChange = False;
 
 
-if state == 1:
-    tem = 0;
-    for num in sum:
-        tem += num;
-    print(tem);
-    sum = []
-elif state == 2:
-    tem = 0;
-    for num in sub:
-        tem -= num;
-    print(tem);
-    sub = []
-elif state == 3:
-    tem = 1;
-    for num in mult:
-        tem *= num;
-    print(tem);
-    mult = []
-elif state == 4:
-    tem = 0;
-    for num in div:
-        tem /= num;
-    print(tem);
-    div = []
+notes.proc()

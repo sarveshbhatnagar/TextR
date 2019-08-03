@@ -8,6 +8,12 @@ class Process(object):
     def __init__(self, content):
         self.content = content.split()
         self.index = 0
+        self.state = 0
+        self.stateChange = False
+        self.sum = []
+        self.sub = []
+        self.mult = []
+        self.div = []
 
     def lex(self):
         self.index += 1;
@@ -18,3 +24,29 @@ class Process(object):
             return False;
         else:
             return True;
+
+    def proc(self):
+        if self.state == 1:
+            tem = 0;
+            for num in self.sum:
+                tem += num;
+            print(tem);
+            self.sum = []
+        elif self.state == 2:
+            tem = 0;
+            for num in self.sub:
+                tem -= num;
+            print(tem);
+            self.sub = []
+        elif self.state == 3:
+            tem = 1;
+            for num in self.mult:
+                tem *= num;
+            print(tem);
+            self.mult = []
+        elif self.state == 4:
+            tem = 0;
+            for num in self.div:
+                tem /= num;
+            print(tem);
+            self.div = []
