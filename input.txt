@@ -1,3 +1,5 @@
 sum 1 2 3 4 5
 sub 1 2 3 4
 mult 1 2 3
+sum 1 2 3
+sub 2 3 4

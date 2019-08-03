@@ -25,6 +25,15 @@ while notes.end():
     if x in constants.function:
         # print(constants.function[x])
         #change state to the function value
+        #since state is changing here, we need to perform previous state function.
+        if state == 1:
+            pass #do something
+        elif state == 2:
+            pass #do something...
+        elif state == 3:
+            pass
+        elif state == 4:
+            pass
         state = constants.function[x]
         stateChange = True;
 
