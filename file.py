@@ -1,6 +1,3 @@
-
-
-
 class File(object):
     """documentation for File.
     initialize with filename,
