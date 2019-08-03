@@ -8,6 +8,7 @@ x = file.File("input.tr")
 
 #reading the file
 content = x.read()
+x.clear()
 
 #creating process object for lex
 notes = process.Process(content);

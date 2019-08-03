@@ -18,3 +18,6 @@ class File(object):
         with open("output.txt","a") as file:
             file.write(content)
             file.write("\n")
+
+    def clear(self):
+        open('output.txt', 'w').close()
