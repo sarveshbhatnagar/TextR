@@ -27,13 +27,29 @@ while notes.end():
         #change state to the function value
         #since state is changing here, we need to perform previous state function.
         if state == 1:
-            pass #do something
+            tem = 0;
+            for num in sum:
+                tem += num;
+            print(tem);
+            sum = []
         elif state == 2:
-            pass #do something...
+            tem = 0;
+            for num in sub:
+                tem -= num;
+            print(tem);
+            sub = []
         elif state == 3:
-            pass
+            tem = 1;
+            for num in mult:
+                tem *= num;
+            print(tem);
+            mult = []
         elif state == 4:
-            pass
+            tem = 0;
+            for num in div:
+                tem /= num;
+            print(tem);
+            div = []
         state = constants.function[x]
         stateChange = True;
 
@@ -53,7 +69,27 @@ while notes.end():
         stateChange = False;
 
 
-print(sum);
-print(sub);
-print(mult);
-print(div);
+if state == 1:
+    tem = 0;
+    for num in sum:
+        tem += num;
+    print(tem);
+    sum = []
+elif state == 2:
+    tem = 0;
+    for num in sub:
+        tem -= num;
+    print(tem);
+    sub = []
+elif state == 3:
+    tem = 1;
+    for num in mult:
+        tem *= num;
+    print(tem);
+    mult = []
+elif state == 4:
+    tem = 0;
+    for num in div:
+        tem /= num;
+    print(tem);
+    div = []
